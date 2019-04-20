@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/client/add', 'ClientController@store');
+
+Route::put('/client/update/{id}', 'ClientController@update');
+
+Route::post('/client/show', 'ClientController@show');
